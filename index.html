@@ -171,9 +171,51 @@
     }
     .note { text-align: center; font-size: 0.78rem; color: #ccc; margin-top: 10px; }
 
+    /* 후기 분석 */
+    .review-wrap {
+      max-width: 1100px;
+      margin: 0 auto 32px;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.08);
+    }
+    .review-wrap h2 { padding: 18px 24px; font-size: 0.95rem; font-weight: 700; border-bottom: 1px solid #f0f0f0; }
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .review-card {
+      padding: 18px 20px;
+      border-right: 1px solid #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .review-card:last-child { border-right: none; }
+    .review-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+    .review-brand { font-size: 0.85rem; font-weight: 700; }
+    .review-count { font-size: 0.72rem; color: #aaa; background: #f5f5f5; padding: 2px 8px; border-radius: 20px; }
+    .review-section { border-radius: 8px; padding: 10px 12px; }
+    .review-section.good { background: #f0faf4; }
+    .review-section.bad { background: #fff8f8; }
+    .review-section-title { font-size: 0.78rem; font-weight: 700; margin-bottom: 6px; color: #444; }
+    .review-section ul { padding-left: 14px; display: flex; flex-direction: column; gap: 5px; }
+    .review-section li { font-size: 0.78rem; color: #555; line-height: 1.55; }
+    .review-note { font-size: 0.73rem; color: #f0a500; background: #fdf6ec; border-radius: 6px; padding: 6px 10px; line-height: 1.5; }
+
     @media (max-width: 700px) {
       .compare-grid { grid-template-columns: 1fr; }
       .rec-by-case { grid-template-columns: 1fr; }
+      .review-grid { grid-template-columns: 1fr; }
+      .review-card { border-right: none; border-bottom: 1px solid #f0f0f0; }
+      .review-card:last-child { border-bottom: none; }
     }
   </style>
 </head>
@@ -415,6 +457,102 @@
         · 포스트모던보다 저렴하게 다크 인테리어
       </div>
     </div>
+  </div>
+</div>
+
+<!-- 후기 분석 섹션 -->
+<div class="review-wrap">
+  <h2>💬 실제 후기 분석</h2>
+  <div class="review-grid">
+
+    <!-- 밀키 후기 -->
+    <div class="review-card">
+      <div class="review-card-header">
+        <span class="review-brand">포레홈 밀키 850</span>
+        <span class="review-count">19개 후기</span>
+      </div>
+      <div class="review-section good">
+        <div class="review-section-title">👍 좋은 점</div>
+        <ul>
+          <li><strong>세라믹 실용성</strong> — 냄비받침 없이 뜨거운 냄비 직접 올려도 됨. 음식물 착색 없이 깔끔하게 닦임</li>
+          <li><strong>소음 방지 처리</strong> — 상판 하단 소음 방지 처리로 그릇 소리가 적음</li>
+          <li><strong>볼트 체결 구조</strong> — 상판이 얹히는 게 아니라 볼트로 고정돼 안정적</li>
+          <li><strong>디자인</strong> — 화이트+블랙 조합 세련됨. 둥근 기둥 다리가 귀엽고 고급스러워 보임</li>
+          <li><strong>수평 조절</strong> — 다리 하단 높이 조절 나사 있음</li>
+          <li><strong>배송/설치</strong> — 기사님 꼼꼼하고 친절하다는 언급 다수</li>
+        </ul>
+      </div>
+      <div class="review-section bad">
+        <div class="review-section-title">👎 아쉬운 점</div>
+        <ul>
+          <li>다리 연결부 도장 까짐 1건</li>
+          <li>의자 이음새 마감 아쉬움 (식탁 자체 문제는 아님)</li>
+          <li>생각보다 무거움</li>
+        </ul>
+      </div>
+      <div class="review-note">⚠️ 19개 중 5개는 체험단(#오감리뷰) 후기예요.</div>
+    </div>
+
+    <!-- 포스트모던 후기 -->
+    <div class="review-card">
+      <div class="review-card-header">
+        <span class="review-brand">포스트모던 스톤 950</span>
+        <span class="review-count">91개 후기</span>
+      </div>
+      <div class="review-section good">
+        <div class="review-section-title">👍 좋은 점</div>
+        <ul>
+          <li><strong>스톤 질감 상판</strong> — 매끈하지 않은 은은한 질감이 리얼 스톤처럼 고급스럽다는 의견 다수</li>
+          <li><strong>원목 다리</strong> — 벤자민무어 마감 고무나무 원목 다리가 따뜻하고 예쁨. "다리 때문에 골랐다"는 후기도</li>
+          <li><strong>국내 제조</strong> — 새 가구 냄새 없음, 마감 퀄리티 좋음</li>
+          <li><strong>안정감</strong> — 넓적한 플랫 다리라 흔들림 없음</li>
+          <li><strong>배송/설치</strong> — 날짜 지정 가능, 기사님 친절</li>
+        </ul>
+      </div>
+      <div class="review-section bad">
+        <div class="review-section-title">👎 아쉬운 점</div>
+        <ul>
+          <li><strong>LPM 소재</strong> — 세라믹이 아님. 뜨거운 냄비 직접 올리면 안 됨 (냄비받침 필수)</li>
+          <li>블랙 상판은 물자국이 잘 보임. 수시로 닦아줘야 함</li>
+          <li>상판 테두리 이음선(줄) 보인다는 후기 2~3건 (업체 측은 정상이라 답변)</li>
+          <li>상판 속 빈 느낌, 얇다는 의견 2건 (MDF 특성)</li>
+          <li>상판 옆면 날카로워 나무 의자에 스크래치 날 수 있음</li>
+        </ul>
+      </div>
+      <div class="review-note">⚠️ 일부 체험단(#오감리뷰) 후기 포함. LPM은 세라믹·포세린이 아닙니다.</div>
+    </div>
+
+    <!-- 루엔나 후기 -->
+    <div class="review-card">
+      <div class="review-card-header">
+        <span class="review-brand">라티에 루엔나 900</span>
+        <span class="review-count">288개 후기</span>
+      </div>
+      <div class="review-section good">
+        <div class="review-section-title">👍 좋은 점</div>
+        <ul>
+          <li><strong>세라믹 실용성</strong> — 김치·빨간 양념 흘려도 착색 없이 쉽게 닦임. 가장 많이 언급된 장점</li>
+          <li><strong>튼튼함/안정감</strong> — 다리 4개 구조로 흔들림 없고 묵직함</li>
+          <li><strong>색상</strong> — 쌩화이트가 아닌 그레이/크림 아이보리 톤이 오히려 고급스럽다는 의견 다수</li>
+          <li><strong>가성비</strong> — "이 가격에 세라믹은 찾기 힘들다" 반복 언급</li>
+          <li><strong>상판 고정 구조</strong> — 볼트 고정으로 밀림 없음</li>
+          <li><strong>배송/설치</strong> — 친절하고 꼼꼼하다는 언급 매우 많음</li>
+        </ul>
+      </div>
+      <div class="review-section bad">
+        <div class="review-section-title">👎 아쉬운 점</div>
+        <ul>
+          <li><strong>그릇 소리</strong> — 세라믹 특성상 그릇 내려놓을 때 쇳소리 남. 여러 명 언급</li>
+          <li><strong>배송 지연</strong> — 재입고 대기로 1개월 이상 소요 케이스 다수. 별도 안내 없어 불편</li>
+          <li>다리 연결부 도장 까짐 2~3건. AS 안 된다는 후기 1건</li>
+          <li>다리 조립 불량(한쪽 들뜸/비뚤어짐) 2~3건</li>
+          <li>상판 표면 거칠어 그릇 밀기 어려움</li>
+          <li>1100 사이즈 예상보다 매우 큼. 20평대엔 주의 필요</li>
+        </ul>
+      </div>
+      <div class="review-note">⚠️ 배송 지연 케이스가 많으니 급하면 입고 일정 먼저 확인하세요.</div>
+    </div>
+
   </div>
 </div>
 
